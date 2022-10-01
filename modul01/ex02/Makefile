@@ -1,0 +1,35 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/16 04:57:59 by mfagri            #+#    #+#              #
+#    Updated: 2022/09/16 04:58:53 by mfagri           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = HI_THIS_IS_BRAIN
+
+SRC	= main.cpp
+
+CPC = c++
+
+CFLAGS = -Wall -Wextra -Werror
+DFLAGS = -std=c++98
+OBJ = $(SRC:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CPC) $(CFLAGS) $(DFLAGS) $(SRC) -o $(NAME)
+
+
+clean:
+	rm -rf $(OBJ)
+
+fclean: clean
+	rm -rf $(NAME)
+
+re:	fclean all
