@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 18:24:16 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 12:43:29 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/02 13:23:19 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ ClapTrap::ClapTrap()
 {
    std::cout<<"Default constructor called"<<std::endl;
 }
+
 ClapTrap &ClapTrap::operator = (ClapTrap const &a)
 {
     std::cout<<"Copy assignment operator called"<<std::endl;
@@ -32,7 +33,7 @@ ClapTrap &ClapTrap::operator = (ClapTrap const &a)
 }
 ClapTrap::ClapTrap(std::string name)
 {
-    std::cout << "constructor called"<<std::endl;
+    std::cout << "Default constructor called"<<std::endl;
     this->name = name;
     epoints = 10;
     hpoints = 10;

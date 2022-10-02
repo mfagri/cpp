@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 17:41:35 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 13:16:23 by mfagri           ###   ########.fr       */
+/*   Created: 2022/10/02 19:07:23 by mfagri            #+#    #+#             */
+/*   Updated: 2022/10/02 19:22:22 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
-class ClapTrap{
+class WrongAnimal{
     protected:
-        std::string name;
-        int hpoints;
-        int epoints;
-        int attackd;
+        std::string type;
     public:
-        ClapTrap();
-        ClapTrap(std::string name);
-        ClapTrap(const ClapTrap &copy);
-        ClapTrap &operator = (ClapTrap const &a);
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
-        ~ClapTrap();
+        WrongAnimal();
+        virtual~WrongAnimal();
+        WrongAnimal(std::string name);
+        WrongAnimal(const WrongAnimal &copy);
+        WrongAnimal &operator = (WrongAnimal const &a); 
+        virtual void makeSound() const;
+        std::string getType(void) const;
 };
 #endif
