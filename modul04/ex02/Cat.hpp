@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Polymorphism.hpp                                   :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 15:52:45 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/03 21:40:20 by mfagri           ###   ########.fr       */
+/*   Created: 2022/10/02 16:50:33 by mfagri            #+#    #+#             */
+/*   Updated: 2022/10/03 20:59:40 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POLYMORPHISM_HPP
-#define POLYMORPHISM_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include <iostream>
+#include "Polymorphism.hpp"
+#include "Brain.hpp"
+#include "AnimalA.hpp"
 
-class Animal {
-    protected:
-        std::string type;
-    public:
-    Animal();
-    virtual~Animal();
-    Animal(std::string name);
-    Animal(const Animal &copy);
-    Animal &operator = (Animal const &a);
-    virtual void makeSound() const;
-    virtual std::string getType(void) const;
+class Cat : public AnimalA {
+  private:
+    Brain *brain;
+  public:
+    Cat();
+    ~Cat();
+    Cat(std::string type);
+    Cat(const Cat &copy);
+    Cat &operator = (Cat const &a);
+    void makeSound() const;
+    std::string getType(void) const;
 };
 
 #endif

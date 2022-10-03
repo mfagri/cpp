@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Polymorphism.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 19:07:23 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/03 21:40:34 by mfagri           ###   ########.fr       */
+/*   Created: 2022/10/02 15:52:45 by mfagri            #+#    #+#             */
+/*   Updated: 2022/10/03 20:50:32 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#ifndef POLYMORPHISM_HPP
+#define POLYMORPHISM_HPP
 
 #include <iostream>
 
-class WrongAnimal{
+class Animal {
     protected:
         std::string type;
     public:
-        WrongAnimal();
-        virtual~WrongAnimal();
-        WrongAnimal(std::string name);
-        WrongAnimal(const WrongAnimal &copy);
-        WrongAnimal &operator = (WrongAnimal const &a); 
-        virtual void makeSound() const;
-        virtual std::string getType(void) const;
+    Animal();
+    virtual~Animal();
+    Animal(std::string name);
+    Animal(const Animal &copy);
+    Animal &operator = (Animal const &a);
+    virtual void makeSound() const;
+    virtual std::string getType(void) const;
 };
+
 #endif

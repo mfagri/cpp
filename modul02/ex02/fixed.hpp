@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 01:08:47 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/01 16:41:35 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/03 18:21:39 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Fixed{
     Fixed(const float i);
     static Fixed & max(Fixed  &a,Fixed  &b);
     static Fixed  max(Fixed  const &a,Fixed  const &b);
+    static Fixed & min(Fixed  &a,Fixed  &b);
+    static Fixed  min(Fixed  const &a,Fixed  const &b);
     int getRawBits( void ) const;
     void setRawBits( int const raw );
     Fixed &operator = (Fixed const &a);

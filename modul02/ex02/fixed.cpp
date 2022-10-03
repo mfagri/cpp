@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 01:09:56 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/01 19:41:03 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/03 18:21:20 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,10 +167,26 @@ Fixed&  Fixed:: max(Fixed  &a,Fixed  &b)
         return(b);
 }
 
+Fixed&  Fixed:: min(Fixed  &a,Fixed  &b)
+{
+    if(a < b)
+        return(a);
+    else
+        return(b);
+}
 Fixed  Fixed:: max(Fixed  const &a,Fixed  const &b)
 {
     Fixed t;
     if(a > b)
+        t.raw = a.raw;
+    else
+        t.raw = b.raw;
+    return (t);
+}
+Fixed  Fixed:: min(Fixed  const &a,Fixed  const &b)
+{
+    Fixed t;
+    if(a < b)
         t.raw = a.raw;
     else
         t.raw = b.raw;
