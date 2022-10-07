@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:42:49 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/07 18:43:59 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/07 18:18:14 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,4 @@ int main()
     catch(std::exception& e){
         std::cout<<e.what()<< std::endl;
     }
-    Bureaucrat j("ded",10);
-    std::cout<<j;
 }

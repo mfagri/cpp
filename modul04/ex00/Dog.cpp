@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:55:21 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 17:38:38 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/07 16:11:52 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Dog &Dog::operator = (Dog const &a)
 
 Dog::Dog(std::string type)
 {
-    std::cout << "Dog Default constructor called"<<std::endl;
+    std::cout << "Dog parametre constructor called"<<std::endl;
     this->type = type;
 }
 
