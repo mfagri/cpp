@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:44:59 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/08 16:45:50 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/09 14:23:41 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Bureaucrat{
         
         void incrementgrade();
         void decrementgrade();
-        void signForm(Bureaucrat const &bureaucrat, Form const &form) const;
+        void signForm(Form const &form) const;
         
 };
 

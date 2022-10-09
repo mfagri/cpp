@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:20 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/08 16:58:59 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/09 14:25:54 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Form{
     public:
         Form();
         ~Form();
-        Form(std::string name_,bool indec_,int grades,int gradee);
+        Form(std::string name_,int grades,int gradee);
         Form(const Form &copy);
         Form &operator = (Form const &b);
         std::string getName() const;

@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:16 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/08 17:29:37 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/09 14:25:41 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Form::Form():gradesigned(0),gradeexcute(0)
 Form::~Form(){   
 }
 
-Form::Form(std::string name_,bool indec_,int grades,int gradee):name(name_),indec(indec_),gradesigned(grades),gradeexcute(gradee) {
+Form::Form(std::string name_,int grades,int gradee):name(name_),gradesigned(grades),gradeexcute(gradee) {
     if(gradee < 1)
         Form::GradeTooHighException();
     if(gradee > 150)
@@ -64,9 +64,9 @@ std::ostream &operator<< (std::ostream &out,const Form  &a)
 
 void Form::beSigned(Bureaucrat &a)
 {
-    if(a.getGrade() <= 1)
+    if(a.getGrade() <= this->gradesigned)
         indec = true;
-    if(a.getGrade() > 150)
+    else
         Form::GradeTooLowException();
 }
 
