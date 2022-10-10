@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:22:11 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 17:01:40 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/10 17:16:44 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ class RobotomyRequestForm : public Form{
         RobotomyRequestForm(std::string target_);
         RobotomyRequestForm &operator=(RobotomyRequestForm const &b);
         RobotomyRequestForm(const RobotomyRequestForm &copy);
+        void  robotomized(void);
 };
 #endif
