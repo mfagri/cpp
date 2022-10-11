@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:44:59 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:08:51 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 11:07:03 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <iostream>
 #include "Form.hpp"
 #include <ctime>
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 class Form;
 class Bureaucrat{

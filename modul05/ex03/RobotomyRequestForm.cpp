@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:55:05 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:06:06 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 12:14:10 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy):Form("
     *this = copy;
 }
 
-void RobotomyRequestForm::action(void)
+void RobotomyRequestForm::action(void) const
 {
     int t ;
     t = time(NULL);

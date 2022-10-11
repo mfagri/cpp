@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:16 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 21:06:15 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:32:28 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ const char* Form::NotSigned::what() const throw()
 void Form::execute(Bureaucrat const & executor) const
 {
     if(this->indec && executor.getGrade() > this->getGradex())
-        std::cout<<"";
+        action();
     else
     {
         throw(Form::NotSigned());

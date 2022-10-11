@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 22:32:41 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:04:59 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:33:33 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator = (ShrubberyCreationForm 
     return (*this);
 }
 
-void ShrubberyCreationForm::action(void)
+void ShrubberyCreationForm::action(void) const
 {
     std::string tree = "";
     std::ofstream w(((target).c_str()));

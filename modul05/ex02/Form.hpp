@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:20 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:54:47 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:34:39 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ class Form{
         };
         void beSigned(Bureaucrat &a);
         void execute(Bureaucrat const & executor) const;
-        void virtual action(void) = 0;
+        void virtual action(void)  const = 0;
 };
 std::ostream &operator<< (std::ostream &out,const Form  &a);
 

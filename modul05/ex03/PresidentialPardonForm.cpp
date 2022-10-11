@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:06:48 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:06:35 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:33:44 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &cop
     *this = copy;
 }
 
-void PresidentialPardonForm::action(void)
+void PresidentialPardonForm::action(void) const
 {
     std::cout<<this->target<<"has been pardoned by Zaphod Beeblebrox\n";
 }

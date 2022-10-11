@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 21:15:47 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:02:21 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:34:06 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ShrubberyCreationForm : public Form{
         ShrubberyCreationForm(std::string target_);
         ShrubberyCreationForm(const ShrubberyCreationForm &copy);
         ShrubberyCreationForm &operator = (ShrubberyCreationForm const &b);
-        void action(void);
+        void action(void) const;
 };
 std::ostream &operator<< (std::ostream &out,const ShrubberyCreationForm  &a);
 

@@ -6,13 +6,15 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:20 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:54:47 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 12:08:49 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
-#include "Bureaucrat.hpp"
+
+#include <string>
+#include <iostream>
 
 class Bureaucrat;
 class Form{
@@ -52,7 +54,7 @@ class Form{
         };
         void beSigned(Bureaucrat &a);
         void execute(Bureaucrat const & executor) const;
-        void virtual action(void) = 0;
+        void virtual action(void) const = 0;
 };
 std::ostream &operator<< (std::ostream &out,const Form  &a);
 

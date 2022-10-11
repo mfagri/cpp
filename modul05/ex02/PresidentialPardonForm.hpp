@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:03:41 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:03:05 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:34:24 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ class PresidentialPardonForm:public Form{
        PresidentialPardonForm(std::string target_);
        PresidentialPardonForm &operator=(PresidentialPardonForm const &b);
         PresidentialPardonForm(const PresidentialPardonForm &copy);
-        void action(void);
+        void action(void) const;
 };
 #endif
