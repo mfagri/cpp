@@ -6,17 +6,10 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:24:52 by mfagri            #+#    #+#             */
-/*   Updated: 2022/09/12 20:56:47 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/12 14:52:12 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include <iostream>
-#include <stdio.h>
-#include <iomanip>
-#include <string>
-#include <stdlib.h>
 #include "Phonebook.hpp"
 
 std::string	ft_short(std::string s)
@@ -29,7 +22,6 @@ std::string	ft_short(std::string s)
             s[i] = ' ';
         i++;
     }
-    
     i = 0;
 	if (s.size() > 10)
 	{
@@ -47,8 +39,7 @@ std::string	ft_short(std::string s)
                 }
                 break;
             }
-        }
-        
+        } 
 	}
 	return (s);
 }
@@ -70,6 +61,8 @@ std::string Countact:: get_num()
 }
 void Countact:: set_information(int i,std::string s)
 {
+    if(!isalnum(s[0]))
+        s = "notvalide";
     if(i == 0)
         firstname = s;
     if(i == 1)
@@ -105,6 +98,7 @@ void Phonebook::get_contact_info(int i)
 {
     int j = 0;
     std::string k;
+    std::cout<<"____________________________________________\n";
     while (j < i)
     {
         std::cout << std::setw(10);
@@ -121,9 +115,12 @@ void Phonebook::get_contact_info(int i)
         std::cout << '|'<<std::endl;
         j++;
     }
+    std::cout<<"____________________________________________\n";
     std::cout<<"choise Countact :";
     std::getline(std::cin,k);
-    if(k[0] == '\0' || k.length() > 1)
+    if (std::cin.eof()==1)
+        return ;
+    if(k[0] == '\0' || k.length() > 1 || !isdigit(k[0]))
     {
         std::cout<<"choice integer number please\n";
         get_contact_info(j);
@@ -141,7 +138,7 @@ void Phonebook::get_contact_info(int i)
     std::cout<< "last name :"<<b[l-1].get_lastname()<<std::endl;
     std::cout<<"nickname :"<<b[l-1].get_nickname()<<std::endl;
     std::cout<<"phounenumber :"<<b[l-1].get_num()<<std::endl;
-    std::cout<<"your : choice | ADD | SEARCH | EXIT :"; 
+    std::cout<<"your  choice :| ADD | SEARCH | EXIT :"; 
     return;
 }
 int Phonebook::set_contact_info(int i)
@@ -155,18 +152,25 @@ int Phonebook::set_contact_info(int i)
     {
         k = 0;
         std::cout<<lis[j]<<" :";
-        if(!std::getline(std::cin,s))
-            return (1);
-        if(s[0] == '\0')
+        std::getline(std::cin,s);
+        if (std::cin.eof()==1)
+            return 0;
+            
+        if(s.empty())
         {
-            std::cout<<"pleas fill it out\n";
-            k = 1;
-            j--;
+            while (s.empty())
+            {
+                std::cout << "can't have empty fields" << std::endl;
+                std::cout<<lis[j]<<" :";
+                std::getline(std::cin,s);
+                if (std::cin.eof()==1)
+                    return (1);
+            }
+
         }
-        if(k == 0)
-            b[i].set_information(j,s);
+        b[i].set_information(j,s);
         j++;   
     }
-    std::cout<<"your : choice | ADD | SEARCH | EXIT :";
+    std::cout<<"your  choice :| ADD | SEARCH | EXIT :";
     return (0);
 }

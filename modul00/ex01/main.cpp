@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:56:52 by mfagri            #+#    #+#             */
-/*   Updated: 2022/09/12 20:57:12 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 21:31:40 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
     countact = 0;
     count = 0;
     std::string s;
-    std::cout<<"your : choice | ADD | SEARCH | EXIT :";
+    std::cout<<"your  choice :| ADD | SEARCH | EXIT :";
     while(1)
     {
         if(!std::getline(std::cin,s))
@@ -40,17 +40,15 @@ int main()
             if(count == 0)
             {
                 std::cout<<"is empty\n";
-                std::cout<<"your : choice | ADD | SEARCH | EXIT :"; 
+                std::cout<<"your  choice :| ADD | SEARCH | EXIT :"; 
             }
             else
                 g.get_contact_info(countact);
         }
         else if (s == "EXIT")
-        {
             break;
-        }
         else
-            std::cout<<"your : choice | ADD | SEARCH | EXIT :"; 
+            std::cout<<"your  choice :| ADD | SEARCH | EXIT :"; 
     }
     return (0);
 }

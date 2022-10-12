@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 20:31:32 by mfagri            #+#    #+#             */
-/*   Updated: 2022/09/12 20:57:40 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 19:11:51 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 #define PHONEBOOK_HPP
 
 #include <iostream>
-#include <stdio.h>
 #include <iomanip>
 #include <string>
-#include <stdlib.h>
 
 class Countact{
     std::string firstname;

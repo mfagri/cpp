@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:31:54 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/11 12:35:49 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/11 17:03:27 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Intern
 {
     private:
-        Form *forms[3]; 
+        Form *forms[3];
     public:
         Intern();
         virtual ~Intern();
