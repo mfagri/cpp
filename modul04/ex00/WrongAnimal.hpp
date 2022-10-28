@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 19:07:23 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/03 21:40:34 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/27 12:47:59 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ class WrongAnimal{
         std::string type;
     public:
         WrongAnimal();
-        virtual~WrongAnimal();
+        ~WrongAnimal();
         WrongAnimal(std::string name);
         WrongAnimal(const WrongAnimal &copy);
         WrongAnimal &operator = (WrongAnimal const &a); 
-        virtual void makeSound() const;
-        virtual std::string getType(void) const;
+        void makeSound() const;
+        std::string getType(void) const;
 };
 #endif

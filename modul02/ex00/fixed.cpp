@@ -6,12 +6,14 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 01:09:56 by mfagri            #+#    #+#             */
-/*   Updated: 2022/09/28 20:13:41 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/17 11:39:17 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fixed.hpp"
+
 const int Fixed::f = 8;
+
 Fixed::Fixed()
 {
     std::cout<<"Default constructor called"<<std::endl;

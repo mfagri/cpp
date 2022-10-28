@@ -5,36 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:21:12 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/13 14:35:25 by mfagri           ###   ########.fr       */
+/*   Created: 2022/09/16 02:09:52 by mfagri            #+#    #+#             */
+/*   Updated: 2022/10/14 17:16:38 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include <stdio.h>
 int main()
 {
-		
-		// Zombie *newz;
-
-		// newz = newZombie("Z1");
-		// newz->announce();
-		// delete newz;
-		// std::cout << "*****************" << std::endl;
-		// randomChump("Z2");
-		// Zombie *n = zombieHorde(3,"mm");
-		// int i = 0;
-		// while (i< 3)
-		// {
-		//     n[i].announce();
-		//     i++;
-		// }
-		// delete []n;
-		// return (0);
-		Zombie *x = zombieHorde(5,"ma");
-		for (int i = 0; i < 5;i++)
-			x[i].announce();
-		delete[] x;
-		return (0);
-
+    {
+    Weapon club = Weapon("crude spiked club");
+    HumanA bob("Bob", club);
+    bob.attack();
+    club.setType("some other type of club");
+    bob.attack();
+    }
+    {
+    Weapon club = Weapon("crude spiked club");
+    HumanB jim("Jim");
+    jim.setWeapon(club);
+    jim.attack();
+    club.setType("some other type of club");
+    jim.attack();
+    }
+    return 0;
 }

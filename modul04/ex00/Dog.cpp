@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:55:21 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/07 16:11:52 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/26 18:14:56 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ void Dog::makeSound() const
 
 std::string Dog::getType(void) const
 {
-    return (this->type);
+    return ("Dog");
 }

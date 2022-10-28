@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:55:17 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 17:38:27 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/26 23:46:32 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ void Cat::makeSound() const
 
 std::string Cat::getType(void) const
 {
-    return (this->type);
+    return ("Cat");
 }

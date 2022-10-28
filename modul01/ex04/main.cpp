@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 08:40:04 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/13 21:29:17 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/26 23:16:01 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void replace(std::ofstream *w,std::string h,std::string s1,std::string s2)
             h.erase(index,j);
             h.insert(index,s2);
         }
-        index++;
+        index += s1.length();
     }
     *w<<h;
 }
@@ -48,7 +48,7 @@ int main(int ac,char **av)
             return (1);
         }
         std::ifstream r_file(av[1]);
-        if(!r_file)
+        if(!r_file.is_open())
         {
             std::cout<<"availble file\n";
             return (1);   
@@ -63,7 +63,7 @@ int main(int ac,char **av)
             }
         }
         std::ofstream w(((std::string)av[1] + ".replace").c_str());
-        if(!w)
+        if(!w.is_open())
         {
             std::cout<<"availble file\n";
             return (1);   

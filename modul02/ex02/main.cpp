@@ -6,13 +6,14 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 01:39:49 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/01 17:02:26 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/20 14:59:43 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fixed.hpp"
 
-int main( void ) {
+int main( void )
+{
 Fixed a;
 Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 std::cout << a << std::endl;

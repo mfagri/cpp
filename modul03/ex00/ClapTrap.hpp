@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 17:41:35 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 13:16:23 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/23 23:54:48 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 
 class ClapTrap{
-    protected:
+    private:
         std::string name;
         int hpoints;
         int epoints;
@@ -25,7 +25,7 @@ class ClapTrap{
         ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap &copy);
-        ClapTrap &operator = (ClapTrap const &a);
+        ClapTrap &operator = (const ClapTrap  &a);
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);

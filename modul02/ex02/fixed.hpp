@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 01:08:47 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/03 18:21:39 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/21 17:33:02 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include<cmath>
+
 class Fixed{
   private:  
     int   raw;
@@ -28,26 +29,27 @@ class Fixed{
     static Fixed  max(Fixed  const &a,Fixed  const &b);
     static Fixed & min(Fixed  &a,Fixed  &b);
     static Fixed  min(Fixed  const &a,Fixed  const &b);
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
+    int getRawBits(void) const;
+    void setRawBits(int const raw);
     Fixed &operator = (Fixed const &a);
     Fixed operator + (Fixed const &a);
     Fixed operator - (Fixed const &a);
     Fixed operator * (Fixed const &a);
     Fixed operator / (Fixed const &a);
-    Fixed &operator ++(void);
+    Fixed operator ++(void);
     Fixed operator ++(int);
-    Fixed &operator --(void);
+    Fixed operator --(void);
     Fixed operator --(int);
-    friend bool operator== (const Fixed& c1, const Fixed& c2);
-    friend bool operator!= (const Fixed& c1, const Fixed& c2);
-    friend bool operator< (const Fixed& c1, const Fixed& c2);
-    friend bool operator> (const Fixed& c1, const Fixed& c2);
-    friend bool operator<= (const Fixed& c1, const Fixed& c2);
-    friend bool operator>= (const Fixed& c1, const Fixed& c2);
     
-    float toFloat( void ) const;
-    int toInt( void ) const;
+    bool operator== (const Fixed& c2) const;
+    bool operator!= (const Fixed& c2) const;
+    bool operator< (const Fixed& c2) const;
+    bool operator> (const Fixed& c2) const;
+    bool operator<= (const Fixed& c2) const;
+    bool operator>= (const Fixed& c2) const;
+    
+    float toFloat(void) const;
+    int toInt(void) const;
     ~Fixed();
 };
 

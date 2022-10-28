@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 12:30:37 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 13:15:47 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/24 16:15:43 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class ScavTrap:public ClapTrap{
         ScavTrap(std::string name);
         ScavTrap(const ScavTrap &copy);
         ScavTrap &operator = (ScavTrap const &a);
-        void attack(const std::string& target);
-        ~ScavTrap();
+        // void attack(const std::string& target);
+       ~ScavTrap();
         void guardGate();
 };
 #endif

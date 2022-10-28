@@ -6,14 +6,14 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:50:33 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/03 20:59:40 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/27 15:48:38 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include "Polymorphism.hpp"
+#include "Animal.hpp"
 #include "Brain.hpp"
 #include "AnimalA.hpp"
 

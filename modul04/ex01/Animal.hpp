@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 02:17:43 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/13 21:57:18 by mfagri           ###   ########.fr       */
+/*   Created: 2022/10/02 15:52:45 by mfagri            #+#    #+#             */
+/*   Updated: 2022/10/27 15:45:57 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
-#include "string"
-#include "Weapon.hpp"
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-HumanB::HumanB(std::string s)
-{
-    name = s;
-}
+#include <iostream>
 
-HumanB::~HumanB()
-{
-}
-void HumanB::setWeapon(Weapon& w)
-{
-    wp = &w;
-}
+class Animal {
+    protected:
+        std::string type;
+    public:
+    Animal();
+    virtual~Animal();
+    Animal(std::string name);
+    Animal(const Animal &copy);
+    Animal &operator = (Animal const &a);
+    virtual void makeSound() const;
+    virtual std::string getType(void) const;
+};
 
-void HumanB::attack()
-{
-    std::cout<<name<<" attack with their "<<wp->getType()<<std::endl;
-}
+#endif

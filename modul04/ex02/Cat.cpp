@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:55:17 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 16:47:59 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/27 16:16:54 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ Cat::Cat()
 {
    std::cout<<"Cat default constructor called"<<std::endl;
    type = "Cat";
-   if(brain)
-    delete brain;
    brain = new Brain();
 }
 
@@ -31,9 +29,9 @@ Cat &Cat::operator = (Cat const &a)
 {
     std::cout<<"Cat copy assignment operator called"<<std::endl;
     type = a.type;
-    if(this->brain)
-        delete this->brain;
     this->brain = new Brain();
+    if(this != &a)
+        *brain = *a.brain;
     return (*this);
 }
 Cat::Cat(std::string type)

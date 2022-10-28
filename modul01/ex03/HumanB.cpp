@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 11:35:12 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/13 21:55:07 by mfagri           ###   ########.fr       */
+/*   Created: 2022/09/16 02:17:43 by mfagri            #+#    #+#             */
+/*   Updated: 2022/10/14 16:30:41 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#include "HumanB.hpp"
+#include "string"
+#include "Weapon.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <string>
+HumanB::HumanB(std::string s)
+{
+    name = s;
+    wp = NULL;
+}
 
-#include"Weapon.hpp"
+HumanB::~HumanB()
+{
+}
+void HumanB::setWeapon(Weapon& w)
+{
+    wp = &w;
+}
 
-class HumanA{
-    private:
-        std::string name;
-        Weapon *wp;
-    public:
-        HumanA(std::string name,Weapon &wp);
-        ~HumanA();
-        void attack(void);
-};
+void HumanB::attack()
+{
 
-#endif
+    if(!wp)
+        std::cout<<"No weapon\n";
+    else
+        std::cout<<name<<" attack with their "<<wp->getType()<<std::endl;
+}

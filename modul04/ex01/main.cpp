@@ -6,28 +6,32 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:52:48 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/03 16:56:50 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/28 17:11:07 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Polymorphism.hpp"
+#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+void func()
+{
+    system("leaks Animal");
+}
+
 int main()
 {
-// const Animal* meta = new Animal();
-// const Animal* j = new Dog();
-// const Animal* i = new Cat();
-// std::cout << j->getType() << " " << std::endl;
-// std::cout << i->getType() << " " << std::endl;
-// i->makeSound(); //will output the cat sound!
-// j->makeSound();
-// meta->makeSound();
+    //atexit(func);
 
-// delete meta;
-// delete j;
-// delete i;
+    Brain a;
+    Brain b;
+
+    b = a;
+    b.display();
+    //a.display();
+     
+Dog d;
+// d.makeSound();
 const Animal *an[10];
 for(int i = 0;i< 10;i++)
 {
@@ -40,5 +44,10 @@ for(int i = 0;i< 10;i++)
 for(int j = 0;j< 10;j++)
     delete an[j];
 
+Dog *aa = new Dog();
+Dog *ba = new Dog(*aa);
+
+delete ba;
+delete aa;
 return 0;
 }

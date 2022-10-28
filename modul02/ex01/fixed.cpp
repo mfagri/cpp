@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 01:09:56 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/01 14:03:01 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/17 11:26:35 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,23 +50,28 @@ Fixed &Fixed::operator = (Fixed const &a)
     this->raw = a.raw;
     return (*this);
 }
+
 Fixed::Fixed(const int i)
 {
-    std::cout<<"Int constructor called\n";
-  this->raw = roundf(i *power(2,f));
+  std::cout<<"Int constructor called\n";
+  this->raw = roundf(i * power(2,f));
 }
+
 Fixed::Fixed(const float i)
 {
   std::cout<<"Float constructor called\n";
-  this->raw = roundf(i *power(2,f));
+  this->raw = roundf(i * power(2,f));
 }
+
 float Fixed::toFloat( void ) const{
     return(raw/power(2,f));
 }
+
 int Fixed::toInt( void ) const{
     
     return(raw/power(2,f));
 }
+
 float power(int b,int n)
 {
     int i;

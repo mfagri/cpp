@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:31:58 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/11 12:51:11 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/16 22:30:30 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ Form *Intern::makeForm(std::string name,std::string target)
         }
         i++;
     }
-    std::cout<<"form name dosen't exit"<<std::endl;
+    throw ("form name dosen't exit\n");
     return (NULL);
 }

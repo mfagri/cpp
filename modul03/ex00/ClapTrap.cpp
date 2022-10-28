@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 18:24:16 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 12:43:29 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/23 19:08:05 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,36 @@
 
 ClapTrap::~ClapTrap()
 {
-   std::cout<<"Destructor called"<<std::endl;
+   std::cout<<"ClapTrap Destructor called"<<std::endl;
 }
 
 ClapTrap::ClapTrap()
 {
-   std::cout<<"Default constructor called"<<std::endl;
+   std::cout<<"ClapTrap Default constructor called"<<std::endl;
 }
-ClapTrap &ClapTrap::operator = (ClapTrap const &a)
+
+ClapTrap &ClapTrap::operator = (const ClapTrap &a)
 {
-    std::cout<<"Copy assignment operator called"<<std::endl;
+    std::cout<<"ClapTrap Copy assignment operator called"<<std::endl;
     name = a.name;
     epoints = a.epoints;
     hpoints = a.hpoints;
     attackd = a.attackd;
     return (*this);
 }
+
 ClapTrap::ClapTrap(std::string name)
 {
-    std::cout << "constructor called"<<std::endl;
+    std::cout << "ClapTrap constructor called"<<std::endl;
     this->name = name;
     epoints = 10;
     hpoints = 10;
     attackd = 0;
 }
+
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-    std::cout << "Copy constructor called"<<std::endl;
+    std::cout << "ClapTrap Copy constructor called"<<std::endl;
     *this = copy;
 }
 
@@ -67,6 +70,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     }
     return;
 }
+
 void ClapTrap::beRepaired(unsigned int amount)
 {
     if(hpoints > 0 && epoints > 0)

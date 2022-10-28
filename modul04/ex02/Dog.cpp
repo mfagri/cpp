@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:55:21 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 16:48:56 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/27 16:16:59 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ Dog::Dog()
 {
    std::cout<<"Dog default constructor called"<<std::endl;
    type = "Dog";
-   if(brain)
-    delete brain;
    brain = new Brain();
 }
 
@@ -31,8 +29,9 @@ Dog &Dog::operator = (Dog const &a)
 {
     std::cout<<"Dog copy assignment operator called"<<std::endl;
     type = a.type;
-    if(this->brain)
-        delete this->brain;
+    this->brain = new Brain();
+    if(this != &a)
+        *brain = *a.brain;
     return (*this);
 }
 

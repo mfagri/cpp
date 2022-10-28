@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Polymorphism.cpp                                   :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:52:42 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 18:01:01 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/27 15:55:45 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Polymorphism.hpp"
+#include "Animal.hpp"
 
 Animal::~Animal()
 {
@@ -46,5 +46,5 @@ void Animal::makeSound() const {
 
 std::string Animal::getType(void) const
 {
-    return (this->type);
+    return ("Animal");
 }    

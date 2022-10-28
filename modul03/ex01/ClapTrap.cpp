@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 18:24:16 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/02 13:23:19 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/24 16:16:13 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 ClapTrap::~ClapTrap()
 {
-   std::cout<<"Destructor called"<<std::endl;
+   std::cout<<"ClapTrap Destructor called"<<std::endl;
 }
 
 ClapTrap::ClapTrap()
 {
-   std::cout<<"Default constructor called"<<std::endl;
+   std::cout<<"ClapTrap Default constructor called"<<std::endl;
 }
 
 ClapTrap &ClapTrap::operator = (ClapTrap const &a)
 {
-    std::cout<<"Copy assignment operator called"<<std::endl;
+    std::cout<<"ClapTrap Copy assignment operator called"<<std::endl;
     name = a.name;
     epoints = a.epoints;
     hpoints = a.hpoints;
@@ -33,7 +33,7 @@ ClapTrap &ClapTrap::operator = (ClapTrap const &a)
 }
 ClapTrap::ClapTrap(std::string name)
 {
-    std::cout << "Default constructor called"<<std::endl;
+    std::cout << "ClapTrap Default constructor called"<<std::endl;
     this->name = name;
     epoints = 10;
     hpoints = 10;
@@ -41,7 +41,7 @@ ClapTrap::ClapTrap(std::string name)
 }
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-    std::cout << "Copy constructor called"<<std::endl;
+    std::cout << "ClapTrap Copy constructor called"<<std::endl;
     *this = copy;
 }
 
@@ -49,10 +49,8 @@ void ClapTrap::attack(const std::string& target)
 {
     if(hpoints > 0 && epoints > 0)
     {
-        std::cout<<"ClapTrap "<<name<<" attacks "<<target<<" ,Causing "<<attackd<<" points of damage!"<<std::endl;
+        std::cout<<"ClapTrap "<<name<<" attacks "<<target<<", Causing "<<attackd<<" points of damage!"<<std::endl;
         epoints--;
-        if(epoints <= 0)
-            epoints = 0;
     }
     return;
 }
@@ -61,7 +59,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
     if(hpoints > 0 && epoints > 0)
     {
-        std::cout<<"ClapTrap "<<name<<" take damage "<<amount<<" of hit points!"<<std::endl;
+        std::cout<<"ClapTrap " <<name<<" take damage " <<amount<< " of hit points!" <<std::endl;
         hpoints -= amount;
 	    if (hpoints <= 0)
 		    hpoints = 0;
@@ -72,11 +70,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if(hpoints > 0 && epoints > 0)
     {
-        std::cout<<"ClapTrap "<<name<<" get "<<amount<<" hit points back!"<<std::endl;
-        hpoints += amount;
+        std::cout<<"ClapTrap " <<name<< " get " <<amount<< " hit points back!" <<std::endl;
+        hpoints += amount;    
         epoints--;
-        if(epoints <= 0)
-            epoints = 0;
     }
     return;
 }
