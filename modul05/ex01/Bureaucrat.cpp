@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:15:59 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/09 14:28:41 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/29 17:48:40 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,14 @@ void Bureaucrat::signForm(Form const &form) const
     else
         std::cout<< *this<< " bureaucrat couldn’t sign "<<form<< " because the grade is too low,.\n";
  
+}
+
+const char * Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return "My GradeTooHighException happened";
+}
+
+const char * Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return "My GradeTooLowException happened";
 }

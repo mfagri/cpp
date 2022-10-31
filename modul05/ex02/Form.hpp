@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:20 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/11 10:34:39 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/30 22:01:38 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,12 @@ class Form{
         bool getstatus() const ;
         class GradeTooHighException : public std::exception
         {
-            virtual const char* what() const throw()
-            {
-                return "My GradeTooHighException happened";
-            }
+            virtual const char* what() const throw();
         } ;
         
         class GradeTooLowException : public std::exception
         {
-            virtual const char* what() const throw()
-            {
-                return "My GradeTooLowException happened";
-            }
+            virtual const char* what() const throw();
         } ; 
         class NotSigned:public std::exception
         {

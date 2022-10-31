@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:15:59 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 21:29:55 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/30 18:32:48 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ Bureaucrat::Bureaucrat()
 Bureaucrat::Bureaucrat(const std::string name_,int grade):name(name_)
 {
    if(grade < 1)
-    throw(Bureaucrat::GradeTooHighException());
+    throw GradeTooHighException();
    if(grade > 150)
-    throw(Bureaucrat::GradeTooLowException());
+    throw GradeTooLowException();
    this->grade = grade;
     
 }
@@ -81,7 +81,7 @@ void Bureaucrat::signForm(Form const &form) const
     if(form.getstatus())
         std::cout<< *this << " bureaucrat signed "<<form<<std::endl;
     else
-        std::cout<< *this<< " bureaucrat couldn’t sign "<<form<< " because the grade is too low,.\n";
+        std::cout<< *this<< " bureaucrat couldn’t sign "<<form<< " because the grade is too low\n";
  
 }
 
@@ -92,6 +92,16 @@ void Bureaucrat::executeForm(Form const & form)
         std::cout<<*this<<" executed "<<form<<std::endl;
     }catch(std::exception &e)
     {
-         std::cout<<*this<<" canot executed "<<form<<"couse"<<e.what()<<std::endl;
+         std::cout<<*this<<" canot executed "<<form<<" couse "<<e.what()<<std::endl;
     }
+}
+
+const char * Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return "My GradeTooHighException happened";
+}
+
+const char * Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return "My GradeTooLowException happened";
 }

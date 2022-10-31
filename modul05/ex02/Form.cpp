@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:16 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/11 10:34:51 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/29 20:29:36 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,17 @@ bool Form::getstatus() const
 {
     return (indec);
 }
+
+const char * Form::GradeTooHighException::what() const throw()
+{
+    return "My GradeTooHighException happened";
+}
+
+const char * Form::GradeTooLowException::what() const throw()
+{
+    return "My GradeTooLowException happened";
+}
+
 const char* Form::NotSigned::what() const throw()
 {
     return "My GradeTooLowException happened";

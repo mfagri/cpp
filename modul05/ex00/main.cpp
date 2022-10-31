@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:42:49 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/07 18:43:59 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/29 17:46:45 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 int main()
 {
     try{
-        Bureaucrat b("mmm",2200);
+        Bureaucrat b("mmm",-1);
         std::cout<<"mmmmmm\n";
     }
     catch(std::exception& e){
         std::cout<<e.what()<< std::endl;
     }
+    std::cout<<"************************************************************\n";
     try{
         Bureaucrat c("ffff",2);
         c.incrementgrade();
@@ -31,4 +32,5 @@ int main()
     }
     Bureaucrat j("ded",10);
     std::cout<<j;
+    
 }

@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:44:59 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 20:08:51 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/29 16:46:15 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,12 @@ class Bureaucrat{
         int getGrade() const;
         class GradeTooHighException : public std::exception
         {
-            virtual const char* what() const throw()
-            {
-                return "My GradeTooHighException happened";
-            }
+            const char* what() const throw();
         } ;
         
         class GradeTooLowException : public std::exception
         {
-            virtual const char* what() const throw()
-            {
-                return "My GradeTooLowException happened";
-            }
+            const char* what() const throw();
         } ;
         
         void incrementgrade();

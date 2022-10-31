@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:55:05 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/11 10:34:20 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/30 18:59:34 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 RobotomyRequestForm::RobotomyRequestForm():Form("RobotomyRequestForm",72,45)
 {
-    target = "";
+    target = "home";
 }
 RobotomyRequestForm::RobotomyRequestForm(std::string target_):Form("RobotomyRequestForm",72,45)
 {
@@ -41,7 +41,7 @@ void RobotomyRequestForm::action(void) const
     int t ;
     t = time(NULL);
     if(t%2)
-        std::cout<<target<< "has been robotomized successfully 50%"<<" of the time.\n";
+        std::cout<<target<< " has been robotomized successfully 50%"<<" of the time.\n";
     else
         std::cout<<"Robotomy failed\n";     
 }

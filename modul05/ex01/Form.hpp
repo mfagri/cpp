@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:34:20 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/09 14:25:54 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/29 17:52:04 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,12 @@ class Form{
         bool getstatus() const ;
         class GradeTooHighException : public std::exception
         {
-            virtual const char* what() const throw()
-            {
-                return "My GradeTooHighException happened";
-            }
+            const char* what() const throw();
         } ;
         
         class GradeTooLowException : public std::exception
         {
-            virtual const char* what() const throw()
-            {
-                return "My GradeTooLowException happened";
-            }
+            const char* what() const throw();
         } ; 
         void beSigned(Bureaucrat &a);
 };

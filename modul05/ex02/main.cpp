@@ -6,31 +6,33 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:42:49 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/10 21:32:33 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/30 21:05:41 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main()
 {
-    // try{
-    //     Bureaucrat b("mmm",100);
-    //     std::cout<<"mmmmmm\n";
-    //     Form *test("test",100, 100);
-    //     test.beSigned(b);
-    //     b.signForm(test);
-    //     std::cout<<"mmmmmm\n";
-    // }
-    // catch(std::exception& e){
-    //     std::cout<<e.what()<< std::endl;
-    // }
-    // try{
-    //     Bureaucrat c("ffff",2);
-    //     c.incrementgrade();
-    //     std::cout<<"increment\n";
-    // }
-    // catch(std::exception& e){
-    //     std::cout<<e.what()<< std::endl;
-    // }
+   try
+   {
+    Bureaucrat a("bureacrt 1",150);
+    PresidentialPardonForm b("form1");
+    b.beSigned(a);
+    ShrubberyCreationForm c("form2");
+    c.beSigned(a);
+    a.executeForm(b);
+    c.action();
+    b.action();
+    RobotomyRequestForm d("zoro");
+    d.action();
+   }
+   catch(std::exception &e)
+   {
+    std::cout<<e.what()<<std::endl;
+   }
 }

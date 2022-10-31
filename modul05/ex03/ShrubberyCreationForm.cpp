@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 22:32:41 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/11 10:33:33 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/10/30 17:58:10 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,26 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator = (ShrubberyCreationForm 
 
 void ShrubberyCreationForm::action(void) const
 {
-    std::string tree = "";
-    std::ofstream w(((target).c_str()));
-    
+    std::ofstream w(((target+"_shrubbery").c_str()));
+    if(!w.is_open())
+        std::cout<<"cannot open file\n";
+    else
+        w<<      "          {{*}{\n"
+				 "          {{}}}{{\n"
+				 "        {{}}{}}\n"
+				 "           }}}}{\n"
+				 "          {{}}}\n"
+				 "         }{{}{}}\n"
+				 "           {{}{}}\n"
+				 "         }}{{}}\n"
+				 "          {{}}{{\n"
+				 "           \\  /\n"
+				 "        .-''| |``-.\n"
+				 "       '-._/_o_\\_.-'\n"
+				 "        `._MFAGRI_.'\n"
+				 "         | :    : |\n"
+				 "         `._    .'\n"
+				 "            `--'";
+
+    w.close();
 }
