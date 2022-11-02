@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 01:39:49 by mfagri            #+#    #+#             */
-/*   Updated: 2022/10/31 22:39:55 by mfagri           ###   ########.fr       */
+/*   Created: 2022/11/02 20:44:12 by mfagri            #+#    #+#             */
+/*   Updated: 2022/11/02 23:36:06 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fixed.hpp"
+#ifndef BASE_HPP
+#define BASE_HPP
 
-int main( void )
+#include <iostream>
+
+class Base
 {
-Fixed a;
-Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-std::cout << a << std::endl;
-std::cout << ++a << std::endl;
-std::cout << a << std::endl;
-std::cout << a++ << std::endl;
-std::cout << a << std::endl;
-std::cout << b << std::endl;
-std::cout << Fixed::max( a, b ) << std::endl;
-return 0;
-}
+    public:
+        virtual ~Base();
+};
+
+class A:public Base{
+};
+class B:public Base{
+};
+class C:public Base{
+};
+
+#endif
