@@ -6,13 +6,13 @@
 #    By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 17:35:41 by mfagri            #+#    #+#              #
-#    Updated: 2022/11/02 17:35:54 by mfagri           ###   ########.fr        #
+#    Updated: 2022/11/03 17:11:04 by mfagri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Serialization
+NAME =  Identifytype
 
-SRC	= main.cpp 
+SRC	= main.cpp Base.cpp
 
 CXX = c++
 
@@ -22,7 +22,7 @@ OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp Base.hpp A.hpp B.hpp C.hpp
 	$(CXX) $(CFLAGS) $(DFLAGS) -c -o $@ -c $<
 
 $(NAME): $(OBJ)

@@ -6,11 +6,14 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:56:18 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/02 23:35:59 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/03 17:10:38 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
 Base * generate(void)
 {
@@ -21,7 +24,7 @@ Base * generate(void)
         A *n = new(A);
         return(n);
     }
-    else if(random%3 == 1)
+    else if(random%3 == 0)
     {
         B *n = new(B);
         return(n);
@@ -29,6 +32,7 @@ Base * generate(void)
     C *n = new(C);
     return(n);
 }
+
 void identify(Base* p)
 {
     if(dynamic_cast<A*>(p) != NULL)
@@ -38,6 +42,7 @@ void identify(Base* p)
     else if(dynamic_cast<C*>(p) != NULL)
         std::cout<<"type is C\n";
 }
+
 void identify(Base& p)
 {
     A a;
@@ -50,7 +55,7 @@ void identify(Base& p)
     catch(std::bad_cast)
     {
     }
-     try{
+    try{
         b = dynamic_cast<B&>(p);
         std::cout<<"type is B\n";
     }

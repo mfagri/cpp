@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/02 17:35:41 by mfagri            #+#    #+#              #
-#    Updated: 2022/11/02 20:56:02 by mfagri           ###   ########.fr        #
+#    Created: 2022/11/04 21:12:18 by mfagri            #+#    #+#              #
+#    Updated: 2022/11/04 21:50:19 by mfagri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  Identifytype
+NAME = Array
 
-SRC	= main.cpp Base.cpp
+SRC	= main.cpp
 
 CXX = c++
 
@@ -22,7 +22,7 @@ OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.cpp Base.hpp
+%.o: %.cpp Array.hpp
 	$(CXX) $(CFLAGS) $(DFLAGS) -c -o $@ -c $<
 
 $(NAME): $(OBJ)

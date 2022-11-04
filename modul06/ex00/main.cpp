@@ -6,13 +6,15 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:15:47 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/01 23:21:05 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/03 16:59:44 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<iostream>
 #include <string>
 #include <iomanip> 
+
+
 int ft_detectype(std::string s)
 {
     int i;
@@ -31,7 +33,7 @@ int ft_detectype(std::string s)
         {
             if(s.length() > 1 )
             {
-                std::cout<<"error\n";
+                std::cout<<"error string!\n";
                 break;
             }
             if(s.length() == 1)
@@ -55,7 +57,6 @@ int ft_detectype(std::string s)
             {
                // std::cout<<"int :";
                 return(2);
-                break;
             }
         }
         if(isdigit(s[i]))
@@ -171,10 +172,10 @@ int main(int ac,char **av)
             break;
         case 2:
             Int = stoi(s);
-            if(Int == 0)
-                std::cout<<"char: Non displayable\n";
-            else
+            if(Int >= 32 && Int <= 127)
                 std::cout<<"char :"<<"\'"<<static_cast<char>(Int)<<"\'"<<std::endl;
+            else
+                std::cout<<"char: Non displayable\n";
             std::cout<<"int :"<<static_cast<int>(Int)<<std::endl;
             std::cout << std::fixed;
             std::cout<<"float :"<< std::setprecision(1) <<static_cast<float>(Int)<<"f"<<std::endl;
@@ -182,10 +183,10 @@ int main(int ac,char **av)
             break;
         case 3:
             Float = std::stof(s);
-            if(Float == 0)
-                std::cout<<"char: Non displayable\n";
-            else
+            if(Float >= 32 && Float <= 127)
                 std::cout<<"char :"<<"\'"<<static_cast<char>(Float)<<"\'"<<std::endl;
+            else
+                std::cout<<"char: Non displayable\n";
             std::cout<<"int :"<<static_cast<int>(Float)<<std::endl;
             std::cout << std::fixed;
             std::cout<<"float :"<< std::setprecision(1) <<static_cast<float>(Float)<<"f"<<std::endl;
@@ -193,17 +194,17 @@ int main(int ac,char **av)
             break;
         case 4:
             Double = std::stod(s);
-            if(Double == 0)
-                std::cout<<"char: Non displayable\n";
-            else
+            if(Double >= 32 && Double <= 127)
                 std::cout<<"char :"<<"\'"<<static_cast<char>(Double)<<"\'"<<std::endl;
+            else
+                std::cout<<"char: Non displayable\n";
             std::cout<<"int :"<<static_cast<int>(Double)<<std::endl;
             std::cout << std::fixed;
             std::cout<<"float :"<< std::setprecision(1) <<static_cast<float>(Double)<<"f"<<std::endl;
             std::cout<<"double :"<<std::setprecision(1)<<static_cast<double>(Double)<<std::endl;
             break;
         case 5:
-            std::cout<<"no\n";
+            std::cout<<"error in argument\n";
             break;
         }
     }

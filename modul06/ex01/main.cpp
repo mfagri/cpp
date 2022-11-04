@@ -6,13 +6,11 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 17:36:12 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/02 23:32:26 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/04 22:03:56 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-#include <bits/stdc++.h>
 
 typedef struct data_t
 {
@@ -34,11 +32,8 @@ int main()
     r.a = 10;
     r.c = 'a';
     uintptr_t  h  = serialize(&r);
-    std::cout<<sizeof(h)<<std::endl;
     Data *dd = new(Data);
     dd = deserialize(h);
     std::cout << dd->a << std::endl;
     std::cout << dd->c << std::endl;
-    
-    std::cout<<"***************************************\n";
 }
