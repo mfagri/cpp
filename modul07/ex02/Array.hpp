@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 21:29:01 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/05 00:03:28 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/05 22:24:06 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,42 +35,36 @@ class Array
         }
         Array(const Array &copy)
         {
-            arr = copy.arr;
-            // arr = new T[n];
-            // unsigned int i;
-            // i = 0;
-            // while(i < n)
-            // {
-            //     arr[i] = copy.arr[i];
-            //     i++;
-            // }
+            *this = copy;
         }
         Array &operator =(const Array &a)
         {
-            arr = a.arr;
-            // arr = new T(n);
-            // unsigned int i;
-            // i = 0;
-            // while(i < n)
-            // {
-            //     arr[i] = a.arr[i];
-            //     i++;
-            // }
+
+            this->n = a.n;
+            arr = new T[this->n];
+            unsigned int i;
+            i = 0;
+            while(i < this->n)
+            {
+                arr[i] = a[i];
+                i++;
+            }
             return (*this);
         }
         T &operator [] (unsigned int n)
         {
             if(n > this->n )
-                Outofbounds();
+               throw Outofbounds();
             return arr[n];
         }
 
         const T &operator [] (unsigned int n) const
         {
             if(n > this->n)
-                Outofbounds();
+               throw Outofbounds();
             return arr[n];
         }
+        
         class Outofbounds : public std::exception
         {
              const char* what() const throw()
@@ -78,15 +72,15 @@ class Array
                 return "index out of bounds";
              }
         };
+        
+        unsigned int size()
+        {
+            return(n);
+        }
         ~Array()
         {}
         
         
 };
-
-
-
-
-
 
 #endif
