@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 17:51:45 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/06 15:47:06 by mfagri           ###   ########.fr       */
+/*   Created: 2022/11/07 16:38:57 by mfagri            #+#    #+#             */
+/*   Updated: 2022/11/07 18:07:21 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
 #include <iostream>
-
-template<typename T>
-void printelement( T const &a)
-{
-    std::cout<<a<<std::endl;
-}
+#include <vector>
+#include <array>
+#include <algorithm>
 
 template <typename T>
-void iter(T arr[],int size, void(*f)(T const &a))
+void easyfind(T type,int n)
 {
-    int i;
-
-    i = 0;
-    while(i < size)
-    {
-        f(arr[i]);
-        i++;
-    }
+    if((std::find(type.begin(), type.end(), n) == type.end()))
+        std::cout<<"Element not found.\n";
+    else
+        std::cout<<"Element found: "<<n<<std::endl;
 }
+
 #endif

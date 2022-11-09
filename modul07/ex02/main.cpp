@@ -6,18 +6,18 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 21:39:09 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/05 18:53:19 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/06 15:45:37 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Array.hpp"
 
-#define MAX_VAL 750
 
 int main(int, char**)
 {
     Array<int> integerr(5);
+    
     std::cout<<"size of intergerr is "<<integerr.size()<<std::endl;
         for(unsigned int i = 0;i < integerr.size();i++)
             integerr[i] = i+1;

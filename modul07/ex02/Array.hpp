@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 21:29:01 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/05 22:24:06 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/05 23:18:31 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,8 @@ class Array
             }
             return (*this);
         }
-        T &operator [] (unsigned int n)
-        {
-            if(n > this->n )
-               throw Outofbounds();
-            return arr[n];
-        }
 
-        const T &operator [] (unsigned int n) const
+        T& operator [] (unsigned int n) const
         {
             if(n > this->n)
                throw Outofbounds();

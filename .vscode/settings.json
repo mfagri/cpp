@@ -63,6 +63,7 @@
         "vector": "cpp",
         "bit": "cpp",
         "deque": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "stdio.h": "c"
     }
 }

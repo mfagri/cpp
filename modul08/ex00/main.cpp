@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 17:51:45 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/06 15:47:06 by mfagri           ###   ########.fr       */
+/*   Created: 2022/11/07 16:57:20 by mfagri            #+#    #+#             */
+/*   Updated: 2022/11/09 11:41:03 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
+#include "easyfind.hpp"
 
-#include <iostream>
-
-template<typename T>
-void printelement( T const &a)
+int main()
 {
-    std::cout<<a<<std::endl;
+    std::vector<int> eco;
+    std::array<int,5> a1 = {1,2,3,4,5};
+    eco.push_back(1);
+    eco.push_back(2);
+    eco.push_back(3);
+    eco.push_back(4);
+    eco.push_back(5);
+    easyfind(eco,5);
+    easyfind(a1,22);
 }
-
-template <typename T>
-void iter(T arr[],int size, void(*f)(T const &a))
-{
-    int i;
-
-    i = 0;
-    while(i < size)
-    {
-        f(arr[i]);
-        i++;
-    }
-}
-#endif
