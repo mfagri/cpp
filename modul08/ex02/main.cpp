@@ -6,7 +6,7 @@
 /*   By: mfagri <mfagri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 20:19:56 by mfagri            #+#    #+#             */
-/*   Updated: 2022/11/08 21:17:21 by mfagri           ###   ########.fr       */
+/*   Updated: 2022/11/09 12:11:47 by mfagri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ std::cout<<"top is "<<mstack.top()<<std::endl;
 MutantStack<int>::iterator it = mstack.begin();
 MutantStack<int>::iterator ite = mstack.end();
 ++it;
-std::cout<<"lock "<<*it<<std::endl;
+std::cout<<"is "<<*it<<std::endl;
 --it;
-std::cout<<"lock "<<*it<<std::endl;
+std::cout<<"is "<<*it<<std::endl;
 while (it != ite)
 {
 std::cout << *it << std::endl;
